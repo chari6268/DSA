@@ -1,13 +1,10 @@
-#include<stdio.h>
-#include<stdlib.h>
-struct Node{
-    int data;
-    struct Node* next;
-};
+#include <stdio.h>
+#include <stdlib.h>
+#include "linked_list.h"
 
-struct Node *head = NULL;
+struct Node* head = NULL;
 
-struct Node* createNode(int data){
+struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->next = NULL;
@@ -27,21 +24,11 @@ void append(int data) {
     }
 }
 
-void display(){
+void display() {
     struct Node* temp = head;
-    while(temp->next != NULL){
+    while (temp != NULL) {
         printf("%d ", temp->data);
         temp = temp->next;
     }
     printf("\n");
-}
-
-int main(){
-    int n;
-    while(n!=-1){
-        scanf("%d", &n);
-        append(n);
-    }
-    display();
-    return 0;
 }
