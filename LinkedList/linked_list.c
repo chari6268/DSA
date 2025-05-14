@@ -30,6 +30,19 @@ void appendAtBeginning(int data) {
     head = newNode;
 }
 
+void appendAtEnd(int data) {
+    struct Node* newNode = createNode(data);
+    if (head == NULL) {
+        head = newNode;
+    } else {
+        struct Node* temp = head;
+        while (temp->next != NULL) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+}
+
 void display() {
     struct Node* temp = head;
     while (temp != NULL) {

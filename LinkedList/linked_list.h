@@ -11,6 +11,7 @@ extern struct Node* head;
 struct Node* createNode(int data);
 void append(int data);
 void appendAtBeginning(int data);
+void appendAtEnd(int data);
 void display();
 
 #endif

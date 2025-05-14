@@ -21,5 +21,14 @@ int main(){
     }
     printf("Linked list after appending at the beginning:\n");
     display();
+    printf("Enter numbers to append at the end of the linked list (-1 to stop):\n");
+    while (1) {
+        scanf("%d", &n);
+        if (n == -1)
+            break;
+        appendAtEnd(n);
+    }
+    printf("Linked list after appending at the end:\n");
+    display();
     return 0;
 }
