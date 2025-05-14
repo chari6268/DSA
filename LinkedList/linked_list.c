@@ -24,6 +24,12 @@ void append(int data) {
     }
 }
 
+void appendAtBeginning(int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = head;
+    head = newNode;
+}
+
 void display() {
     struct Node* temp = head;
     while (temp != NULL) {
